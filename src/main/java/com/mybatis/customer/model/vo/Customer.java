@@ -14,6 +14,16 @@ public class Customer {
 	private Date enrollDate;
 	
 	public Customer () {}
+	
+	
+	//로그인꺼2개!!
+	public Customer(String userId, String userPw) {
+		super();
+		this.userId = userId;
+		this.userPw = userPw;
+	}
+
+
 
 	public int getUserNo() {
 		return userNo;

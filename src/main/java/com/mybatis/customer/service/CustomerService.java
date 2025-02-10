@@ -8,13 +8,19 @@ import com.mybatis.customer.model.vo.Customer;
 
 public class CustomerService {
 	
-	
-	private SqlSession conn;
-	
 	private CustomerDAO cDao;
 	
+	private SqlSession session;
+	
+	
 	public CustomerService() {
-		conn = SqlSessionTemplate.getSqlSession();
 		cDao = new CustomerDAO();
+		
+		session = SqlSessionTemplate.getSqlSession();
+	}
+	//로그인서블릿에서 넘어옴!!
+	public Customer selectOneByLogin(Customer customer) {
+		Customer result = cDao.selectOneByLogin(session,customer);
+		return result;
 	}
 }
