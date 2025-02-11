@@ -14,8 +14,8 @@
 	<fieldset>
 		<legend>로그인</legend>
 		<form action="/customer/login" method="post">
-			ID: <input type="text" name="Id"><br>
-			PW: <input type="password" name="Pw"><br>
+			ID: <input type="text" name=userId><br>
+			PW: <input type="password" name="userPw"><br>
 			<input type="submit" value="로그인">
 		</form>
 	</fieldset>
