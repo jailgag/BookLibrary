@@ -16,13 +16,13 @@ import com.mybatis.customer.service.CustomerService;
  * Servlet implementation class CustomerServlet
  */
 @WebServlet("/customer/login")
-public class CustomerServlet extends HttpServlet {
+public class CustomerLoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CustomerServlet() {
+    public CustomerLoginServlet() {
         super();
         // TODO Auto-generated constructor stub
     }

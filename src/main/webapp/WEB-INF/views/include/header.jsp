@@ -9,9 +9,10 @@
 	</div>
 		<nav id="nav">
 		<ul class="topMenu">
-			<li><a href="#">책관리</a></li>
+			<li><a href="/book/write">책관리</a></li>
 			<li><a href="#">대여관리</a></li>
 			<li><a href="#">회원관리</a></li>
+			
 			<li><a href="/customer/login">로그인</a></li>
 		</ul>
 	</nav>
