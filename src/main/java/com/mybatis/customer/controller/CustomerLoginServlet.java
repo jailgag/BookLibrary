@@ -48,8 +48,10 @@ public class CustomerLoginServlet extends HttpServlet {
 		if(result != null) {
 			//성공시 메인페이지로이동!
 			HttpSession session = request.getSession();
-			session.setAttribute("userId", result.getUserId());
-			session.setAttribute("userName", result.getUserName());
+			//아래코드 수정!!02/11(19:33)
+			session.setAttribute("result", result);
+			//session.setAttribute("userId", result.getUserId());
+			//session.setAttribute("userName", result.getUserName());
 			response.sendRedirect("/");
 		}else {
 			//실패시 에러페이지로이동!
