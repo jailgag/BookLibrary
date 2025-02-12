@@ -11,7 +11,7 @@
 	<fieldset>
 		<legend>책 등록</legend>
 		<form action="/book/write" method="post">
-			번호: <input type="number" name="bookNo"> <br>
+			
 			제목 : <input type="text" name="bookName"> <br>
 			글쓴이 : <input type="text" name="bookWrite"> <br>
 			가격 : <input type="number" name="bookPrice"> <br>

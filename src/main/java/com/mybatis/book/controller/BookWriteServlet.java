@@ -39,15 +39,17 @@ public class BookWriteServlet extends HttpServlet {
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * 번호: <input type="number" name="bookNo"> <br>
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int bookNo = Integer.parseInt(request.getParameter("bookNo"));
+		//int bookNo = Integer.parseInt(request.getParameter("bookNo"));
 		String bookName = request.getParameter("bookName");
 		String bookWrite =request.getParameter("bookWrite");
 		int bookPrice = Integer.parseInt(request.getParameter("bookPrice"));
 		String publisher = request.getParameter("publisher");
 		String genre = request.getParameter("genre");
-		Book book = new Book(bookNo, bookName, bookWrite, bookPrice, publisher, genre);
+		//Book book = new Book(bookNo, bookName, bookWrite, bookPrice, publisher, genre);
+		Book book = new Book(bookName, bookWrite, bookPrice, publisher, genre);
 		BookService bService = new BookService();
 		int result = bService.insertBook(book);
 		if(result > 0) {

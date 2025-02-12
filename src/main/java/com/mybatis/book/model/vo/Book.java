@@ -11,10 +11,10 @@ public class Book {
 	public Book() {}
 
 	
-	//등록!
-	public Book(int bookNo, String bookName, String bookWrite, int bookPrice, String publisher, String genre) {
+	//등록!int bookNo,
+	public Book(String bookName, String bookWrite, int bookPrice, String publisher, String genre) {
 		super();
-		this.bookNo = bookNo;
+		//this.bookNo = bookNo;
 		this.bookName = bookName;
 		this.bookWrite = bookWrite;
 		this.bookPrice = bookPrice;
