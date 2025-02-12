@@ -9,6 +9,9 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
+import com.mybatis.book.model.vo.Book;
+import com.mybatis.book.service.BookService;
+
 /**
  * Servlet implementation class BookWriteServlet
  */
@@ -38,13 +41,22 @@ public class BookWriteServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int bookNo = Integer.parseInt(request.getParameter("bookNo"));
 		String bookName = request.getParameter("bookName");
 		String bookWrite =request.getParameter("bookWrite");
 		int bookPrice = Integer.parseInt(request.getParameter("bookPrice"));
 		String publisher = request.getParameter("publisher");
 		String genre = request.getParameter("genre");
-		//로그인했을때 아이디 세션에서 아이디 가져옴!!
-		HttpSession session =request.getSession();
+		Book book = new Book(bookNo, bookName, bookWrite, bookPrice, publisher, genre);
+		BookService bService = new BookService();
+		int result = bService.insertBook(book);
+		if(result > 0) {
+			response.sendRedirect("/book/list");
+		}else {
+			//실패시 에러페이지로이동!!
+			request.getRequestDispatcher("")
+			.forward(request, response);
+		}
 		
 	}
 

@@ -11,11 +11,24 @@ public class Book {
 	public Book() {}
 
 	
-	
+	//등록!
+	public Book(int bookNo, String bookName, String bookWrite, int bookPrice, String publisher, String genre) {
+		super();
+		this.bookNo = bookNo;
+		this.bookName = bookName;
+		this.bookWrite = bookWrite;
+		this.bookPrice = bookPrice;
+		this.publisher = publisher;
+		this.genre = genre;
+	}
+
+
+
 	public int getBookNo() {
 		return bookNo;
 	}
 
+	
 	public String getBookName() {
 		return bookName;
 	}

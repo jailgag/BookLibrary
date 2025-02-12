@@ -25,5 +25,10 @@ public class BookService {
 		List<Book> bList = bDao.selectList(session);
 		return bList;
 	}
+	//2.write서블릿에서~!
+	public int insertBook(Book book) {
+		int result = bDao.insertBook(session,book);
+		return result;
+	}
 	
 }

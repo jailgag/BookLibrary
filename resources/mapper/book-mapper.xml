@@ -4,7 +4,7 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="BookMapper">
 	
-	<resultMap type="com.mybatis.book.model.vo.Book" id="BookResultMap">
+	<resultMap type="Book" id="BookResultMap">
 		<id property ="bookNo" column="BOOK_NO"/>
 		<result property ="bookName" column="BOOK_NAME"/>
 		<result property ="bookWrite" column="BOOK_WRITER"/>
@@ -16,4 +16,9 @@
 	<select id="selectList" resultMap="BookResultMap">
 		SELECT * FROM BOOK 
 	</select>
+	
+	<insert id="insertBook">
+		INSERT INTO BOOK VALUES(SEQ_BOOK_NO.NEXTVAL,#{bookName},#{bookWrite},#{bookPrice},#{publisher},#{genre})
+	</insert>
+	
 </mapper>

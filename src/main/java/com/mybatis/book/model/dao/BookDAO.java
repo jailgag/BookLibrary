@@ -14,5 +14,10 @@ public class BookDAO {
 		List<Book> bList = session.selectList("BookMapper.selectList",session);
 		return bList;
 	}
+	//책 등록 !!
+	public int insertBook(SqlSession session, Book book) {
+		int result = session.insert("BookMapper.insertBook",book);
+		return result;
+	}
 	
 }
