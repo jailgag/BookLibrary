@@ -13,5 +13,7 @@
 		<result property ="genre" column="GENRE"/>
 	
 	</resultMap>
-
+	<select id="selectList" resultMap="BookResultMap">
+		SELECT * FROM BOOK 
+	</select>
 </mapper>
