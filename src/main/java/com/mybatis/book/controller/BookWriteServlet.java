@@ -5,6 +5,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 import java.io.IOException;
 
 /**
@@ -36,8 +38,14 @@ public class BookWriteServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		String bookName = request.getParameter("bookName");
+		String bookWrite =request.getParameter("bookWrite");
+		int bookPrice = Integer.parseInt(request.getParameter("bookPrice"));
+		String publisher = request.getParameter("publisher");
+		String genre = request.getParameter("genre");
+		//로그인했을때 아이디 세션에서 아이디 가져옴!!
+		HttpSession session =request.getSession();
+		
 	}
 
 }
