@@ -14,11 +14,23 @@
 	
 	</resultMap>
 	<select id="selectList" resultMap="BookResultMap">
-		SELECT * FROM BOOK 
+		SELECT * FROM BOOK ORDER BY BOOK_NO DESC 
 	</select>
 	
 	<insert id="insertBook">
 		INSERT INTO BOOK VALUES(SEQ_BOOK_NO.NEXTVAL,#{bookName},#{bookWrite},#{bookPrice},#{publisher},#{genre})
 	</insert>
+	
+	<select id="selectOneByNo" resultMap="BookResultMap">
+		SELECT * FROM BOOK WHERE BOOK_NO = #{BOOK_NO}
+	</select>
+	
+	<update id="updateBook">
+		UPDATE BOOK SET BOOK_NAME = #{bookName},BOOK_WRITER = #{bookWrite}, BOOK_PRICE = #{bookPrice}, PUBLISHER = #{publisher} WHERE BOOK_NO = #{bookNo}
+	</update>
+	
+	<delete id="deleteBook">
+		DELETE FROM BOOK WHERE BOOK_NO = #{bookNo}
+	</delete>
 	
 </mapper>

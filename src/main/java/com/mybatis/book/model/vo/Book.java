@@ -11,7 +11,12 @@ public class Book {
 	public Book() {}
 
 	
-	//등록!int bookNo,
+	//책수정!!
+	
+
+
+
+	//등록!int bookNo, 수정!
 	public Book(String bookName, String bookWrite, int bookPrice, String publisher, String genre) {
 		super();
 		//this.bookNo = bookNo;

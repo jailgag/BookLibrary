@@ -30,5 +30,23 @@ public class BookService {
 		int result = bDao.insertBook(session,book);
 		return result;
 	}
+	//modify서블릿에서!(수정)doget에서!!(순서는바뀌었지만 detail에서!
+	public Book selectOneByNo(int bookNo) {
+		// TODO Auto-generated method st
+		Book book = bDao.selectOneByNo(session, bookNo);
+		return book;
+	}
+	//modify서블릿(수정)dopost
+	public int updateBook(Book book) {
+		// TODO Auto-generated method stub
+		int result = bDao.updateBook(session,book);
+		return result;
+	}
+	//책삭제
+	public int deleteBook(int bookNo) {
+		// TODO Auto-generated method stub
+		int result = bDao.deleteBook(session,bookNo);
+		return result;
+	}
 	
 }
