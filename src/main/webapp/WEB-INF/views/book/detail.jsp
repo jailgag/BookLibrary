@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>책 수정하기</title>
+<title>수정하기 및 삭제</title>
 		<link rel="stylesheet" href="../resources/css/reset.css">
 		<link rel="stylesheet" href="../resources/css/header.css">
 		<link rel="stylesheet" href="../resources/css/footer.css">
@@ -13,30 +13,33 @@
 	<div>
 	<jsp:include page="/WEB-INF/views/include/header.jsp"/>
 	<main>
-		<form action="/book/modify" method="post">
-			<h2>책 리스트</h2>
+		<!--<form action="" method="post">  -->
+			<form action="/book/detail" method="post">
+			<input type="hidden" name="bookNo" value="${book.bookNo }">
+			<h2>수정하기</h2>
+			
 			<div>
 				<label>제목 :</label>
-				<input type="text" name="bookName" value="${bookName}">
+				<input type="text" name="bookName" value="${book.bookName}">
 			</div>
 			<div>
 				<label>글쓴이 :</label>
-				<input type="text" name="bookWrite"value="${bookWrite }">
+				<input type="text" name="bookWrite"value="${book.bookWrite }">
 			</div>
 			<div>
 				<label>가격 :</label>
-				<input type="number" name="bookPrice"value="${bookPrice }">
+				<input type="number" name="bookPrice"value="${book.bookPrice }">
 			</div>
 			<div>
 				<label>출판사:</label>
-				<input type="text" name="publisher"value="${publisher }">
+				<input type="text" name="publisher"value="${book.publisher }">
 			</div>
 			<div class="">
 					<div class="">
 					<!-- <a href="/book/detail?bookNo=${book.bookNo }" class="">수정</a> -->
 					
 					<!-- <a href="/book/delete?bookNo=${book.bookNo }" class="">삭제</a> -->
-					
+					<button type="submit">수정하기</button><a hreh=""></a>
 			</div>
 		</form>
 	</main>

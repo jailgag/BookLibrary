@@ -13,7 +13,7 @@ import com.mybatis.book.service.BookService;
 /**
  * Servlet implementation class BookDetailServlet
  */
-@WebServlet("/book/detail")
+@WebServlet("/book/detail") //수정삭제!!
 public class BookDetailServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -30,7 +30,6 @@ public class BookDetailServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//밑에 경로는 list.jsp에서 쿼리문 적힌?곳 적기 =왼쪽꺼!getParameter!!
 		BookService bService = new BookService();
 		//에러나면 밑에 코드 다시 보기!!
 		int bookNo = (request.getParameter("bookNo") != null)
@@ -42,6 +41,29 @@ public class BookDetailServlet extends HttpServlet {
 			.forward(request, response);
 		}else {
 			//실패시 에러페이지이동!!
+			request.getRequestDispatcher("")
+			.forward(request, response);
+		}
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int bookNo = Integer.parseInt(request.getParameter("bookNo"));
+		String bookName = request.getParameter("bookName");
+		String bookWrite =request.getParameter("bookWrite");
+		int bookPrice = Integer.parseInt(request.getParameter("bookPrice"));
+		String publisher = request.getParameter("publisher");
+		//생성자!!
+		Book book = new Book(bookNo,bookName, bookWrite, bookPrice, publisher, publisher);
+		int result = new BookService().updateBook(book);
+		//System.out.println("테스트");
+		if(result > 0) {
+			//System.out.println("테스트2");
+			response.sendRedirect("/book/list");
+		}else {
+			//실패시 에러페이지이동
 			request.getRequestDispatcher("")
 			.forward(request, response);
 		}

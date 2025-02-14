@@ -19,11 +19,11 @@
 		<section class="board-title">
 		<h1>책관리</h1>
 		<a href="/book/write">책등록</a>
-		<a href="/book/modify">책수정</a>
-		<a href="/book/delete?bookNo=${book.bookNo }">책삭제</a>
+		<!-- <a href="/book/delete?bookNo=${book.bookNo }">책삭제</a> -->
+		
 		</section>
 		<div class="search-container">
-			<form class="search-form" action="/book/search" method="get">
+			<form class="search-form" action="" method="get">
 				<select class="search-select" name="searchCondition">
 					<option value="bookNo">책번호</option>
 					<option value="bookName">제목</option>
@@ -51,7 +51,7 @@
 						
 						<!-- <td><a href="book/modify?booName=${book.bookName }">${book.bookName }</a></td> -->
 						<td class="no">${book.bookNo }</td>
-						<td class="name">${book.bookName }</td>
+						<td><a href="/book/detail?bookNo=${book.bookNo }">${book.bookName }</a></td>
 						<td class="write">${book.bookWrite }</td>
 						<td class="price">${book.bookPrice }</td>
 						<td class="publisher">${book.publisher }</td>

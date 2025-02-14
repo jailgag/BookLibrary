@@ -30,19 +30,20 @@ public class BookModifyServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		BookService bService = new BookService();
-		int BookNo = request.getParameter("BookNo") != null ? Integer.parseInt(request.getParameter("BookNo")) : 1;
+		//BookService bService = new BookService();
+		//int BookNo = request.getParameter("BookNo") != null ? Integer.parseInt(request.getParameter("BookNo")) : 1;
 		
-		Book book = bService.selectOneByNo(BookNo);
-		if(book != null) {
-			request.setAttribute("book", book);
-			request.getRequestDispatcher("/WEB-INF/views/notice/modify.jsp")
-			.forward(request, response);
-		}else {
+		//Book book = bService.selectOneByNo(BookNo);
+		//if(book != null) {
+			//request.setAttribute("book", book);
+
+			//request.getRequestDispatcher("/WEB-INF/views/notice/modify.jsp")
+			//.forward(request, response);
+		//}else {
 			//실패시 에러페이지 이동
-			request.getRequestDispatcher("")
-			.forward(request, response);
-		}
+			//request.getRequestDispatcher("")
+			//.forward(request, response);
+	//	}
 	}
 
 	/**
@@ -50,20 +51,20 @@ public class BookModifyServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		int bookNo = Integer.parseInt(request.getParameter("bookNo"));
-		String bookName = request.getParameter("bookName");
-		String bookWrite =request.getParameter("bookWrite");
-		int bookPrice = Integer.parseInt(request.getParameter("bookPrice"));
-		String publisher = request.getParameter("publisher");
-		Book book = new Book(bookName, bookWrite, bookPrice, publisher, publisher);
-		int result = new BookService().updateBook(book);
-		if(result > 0) {
-			response.sendRedirect("/book/list");
-		}else {
+	//	int bookNo = Integer.parseInt(request.getParameter("bookNo"));
+	//	String bookName = request.getParameter("bookName");
+	//	String bookWrite =request.getParameter("bookWrite");
+	//	int bookPrice = Integer.parseInt(request.getParameter("bookPrice"));
+	//	String publisher = request.getParameter("publisher");
+		//Book book = new Book(bookName, bookWrite, bookPrice, publisher, publisher);
+		//int result = new BookService().updateBook(book);
+		//if(result > 0) {
+			//response.sendRedirect("/book/list");
+		//}else {
 			//실패시 에러페이지 이동!!
-			request.getRequestDispatcher("")
-			.forward(request, response);
-		}
+			//request.getRequestDispatcher("")
+			//.forward(request, response);
+	//	}
 	}
 
 }

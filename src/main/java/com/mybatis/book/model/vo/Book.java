@@ -14,7 +14,7 @@ public class Book {
 	//책수정!!
 	
 
-
+	
 
 	//등록!int bookNo, 수정!
 	public Book(String bookName, String bookWrite, int bookPrice, String publisher, String genre) {
@@ -27,13 +27,24 @@ public class Book {
 		this.genre = genre;
 	}
 
-
+	//수정!!
+	public Book(int bookNo, String bookName, String bookWrite, int bookPrice, String publisher, String genre) {
+		super();
+		this.bookNo = bookNo;
+		this.bookName = bookName;
+		this.bookWrite = bookWrite;
+		this.bookPrice = bookPrice;
+		this.publisher = publisher;
+		this.genre = genre;
+	}
 
 	public int getBookNo() {
 		return bookNo;
 	}
 
 	
+
+
 	public String getBookName() {
 		return bookName;
 	}

@@ -13,23 +13,12 @@
 	<div>
 	<jsp:include page="/WEB-INF/views/include/header.jsp"/>
 	<main>
-		<form action="/book/modify" method="post">
+		<form action="" method="post">
+			<input type="hidden" name="bookNo" value="${book.bookNo }">
 			<h2>책 수정</h2>
-			<div>
-				<label>번호 :</label>
-				<input type="number" name="bookName" value="${bookNo}" readonly>
-			</div>
-			<div>
-				<label>글쓴이 :</label>
-				<input type="text" name="bookWrite"value="${book.bookName }">
-			</div>
-			<div>
-				<label>가격 :</label>
-				<input type="number" name="bookPrice"value="${bookPrice }">
-			</div>
-			<div>
-				<label>출판사:</label>
-				<input type="text" name="publisher"value="${publisher }">
+			<div class="form-group">
+			<lable>제목</lable>
+			<input type="text" name="">
 			</div>
 			<button type="submit">수정하기</button>
 			<a href="#">삭제하기</a>

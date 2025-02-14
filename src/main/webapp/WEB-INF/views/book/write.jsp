@@ -36,7 +36,7 @@
 				<input type="text" name="genre">
 			</div>
 			<button type="submit">저장</button>
-			<a href="/book/modify">수정 및 삭제</a>
+			
 		</form>
 	</main>
 	<jsp:include page="/WEB-INF/views/include/footer.jsp" />
