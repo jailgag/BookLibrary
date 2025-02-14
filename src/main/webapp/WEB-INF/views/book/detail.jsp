@@ -39,7 +39,8 @@
 					<!-- <a href="/book/detail?bookNo=${book.bookNo }" class="">수정</a> -->
 					
 					<!-- <a href="/book/delete?bookNo=${book.bookNo }" class="">삭제</a> -->
-					<button type="submit">수정하기</button><a hreh=""></a>
+					<button type="submit">수정하기</button>
+					<a href="/book/delete?bookNo=${book.bookNo }">삭제</a>
 			</div>
 		</form>
 	</main>
