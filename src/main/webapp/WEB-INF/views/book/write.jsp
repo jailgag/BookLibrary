@@ -8,13 +8,14 @@
 		<link rel="stylesheet" href="../resources/css/reset.css">
 		<link rel="stylesheet" href="../resources/css/header.css">
 		<link rel="stylesheet" href="../resources/css/footer.css">
+		<link rel="stylesheet" href="../resources/css/footer.css">
 </head>
 <body>
 	<div>
 	<jsp:include page="/WEB-INF/views/include/header.jsp"/>
 	<main>
 		<form action="/book/write" method="post">
-			<h2>책 등록</h2>
+			<h2>책 등록11</h2>
 			<div>
 				<label>제목 :</label>
 				<input type="text" name="bookName">

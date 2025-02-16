@@ -5,12 +5,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>제일 book - 전체책 검색</title>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>제일 book - 전체책 검색</title>
 		<link rel="stylesheet" href="../resources/css/reset.css">
 		<link rel="stylesheet" href="../resources/css/header.css">
 		<link rel="stylesheet" href="../resources/css/footer.css">
 		<link rel="stylesheet" href="../resources/css/list.css">
-</head>
+	</head>
 <body>
 		<!-- <td class="no">${book.bookNo }</td> -->
 		<div id="container">
@@ -23,7 +26,7 @@
 		
 		</section>
 		<div class="search-container">
-			<form class="search-form" action="" method="get">
+			<form class="search-form" action="#" method="get">
 				<select class="search-select" name="searchCondition">
 					<option value="bookNo">책번호</option>
 					<option value="bookName">제목</option>
