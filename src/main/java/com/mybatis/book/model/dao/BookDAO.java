@@ -11,7 +11,11 @@ public class BookDAO {
 	
 	//리스트(전체조회)
 	public List<Book> selectList(SqlSession session) {
-		// TODO Auto-generated method stub
+		//페이징시작
+		//int limit =10;
+		//int offset =(currentPage-1)*limit;
+		//RowBounds rowBounds = new RowBounds(offset, limit);
+		
 		int offset = 0;
 		int limit = 10;
 		RowBounds rowBounds = new RowBounds(offset, limit);

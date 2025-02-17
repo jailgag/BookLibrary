@@ -10,6 +10,7 @@
 		<nav id="nav">
 		<ul class="topMenu">
 			<li><a href="/book/list">책관리</a></li>
+			
 			<li><a href="#">대여관리</a></li>
 			<li><a href="#">회원관리</a></li>
 			<c:if test="${sessionScope.result.userId == null }">
